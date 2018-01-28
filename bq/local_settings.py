@@ -25,6 +25,7 @@ SECRET_KEY = '14r8=@bko26ce+b2+93+9-+smmw_zq$t53yso+9r&pi$-v=7+t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#=AleX=
 ALLOWED_HOSTS = ['51.15.93.39']
 
 
@@ -51,12 +52,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bq.urls'
 
+#=AleX= Dir for templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-           os.path.join(BASE_DIR, 'templates'), ,# Директория с шаблонами в корневой папке!
-],
+           os.path.join(BASE_DIR, 'templates'), 
+			],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,6 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# =AleX= Dir for static
 # STATIC_URL = '/static/'
-STATIC_URL = os.path.join(BASE_DIR, '/static/')  ,# AleX
+STATIC_URL = os.path.join(BASE_DIR, '/static/')  ,
 
