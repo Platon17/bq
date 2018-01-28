@@ -121,8 +121,4 @@ USE_TZ = True
 
 # STATIC_URL = '/static/'
 STATIC_URL = os.path.join(BASE_DIR, '/static/')  ,# AleX
-# добавляем локальные настройки которые будут перекрывать текущие
-try:
-	from bq.local_settings import *
-except ImportError:
-	pass
+
