@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['51.15.93.39']
 
 #=AleX= 'questions.apps.questionsConfig' - new application 'questions'
 INSTALLED_APPS = [
-    'questions.apps.questionsConfig',
+    'questions.apps.QuestionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,13 +119,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 # =AleX= Dir for static
-# STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 STATIC_URL = os.path.join(BASE_DIR, '/static/')  
+#STATIC_URL = '/var/www/bq/static/' 
 
 # =AleX= Add local settings
 #try:

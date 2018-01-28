@@ -1,5 +1,4 @@
 {% load staticfiles %}
-
 <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
 
 <h1>{{ question.text }}</h1>
@@ -12,7 +11,7 @@
 
 <form action="{% url 'questions:answer' question.id %}" method="post">
     {% csrf_token %}
-    {% for answer in riddle.answer_set.all %}
+    {% for answer in question.answer_set.all %}
         <input type="radio" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
         <label for="answer{{ forloop.counter }}">{{ answer.text }}</label><br />
     {% endfor %}
