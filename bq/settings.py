@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = os.path.join(BASE_DIR, '/static/')  
 
 # =AleX= Add local settings
-try:
-	from bq.local_settings import *
-except ImportError:
-	pass
+#try:
+#	from bq.local_settings import *
+#except ImportError:
+#	pass
