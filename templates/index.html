@@ -2,24 +2,24 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
 
-<h1>Загадки</h1>
+<h1>Викторина (Quiz)</h1>
 
 {% if message %}
     <p><strong>{{ message }}</strong></p>
 {% endif %}
 
-{% if latest_riddles %}
+{% if latest_questions %}
 
     <ul>
-        {% for riddle in latest_riddles %}
+        {% for question in latest_questions %}
             <li>
-                <a href="/riddles/{{ riddle.id }}/">
-                    {{ riddle.text }}
+                <a href="/questions/{{ question.id }}/">
+                    {{ question.text }}
                 </a>
             </li>
         {% endfor %}
     </ul>
 
 {% else %}
-    <p>No riddles are available right now.</p>
+    <p>No questions are available right now.</p>
 {% endif %}

@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
 
-<h1>{{ riddle.text }}</h1>
+<h1>{{ question.text }}</h1>
 
 {% if error_message %}
     <p>
@@ -10,11 +10,11 @@
     </p>
 {% endif %}
 
-<form action="{% url 'riddles:answer' riddle.id %}" method="post">
+<form action="{% url 'questions:answer' question.id %}" method="post">
     {% csrf_token %}
     {% for answer in riddle.answer_set.all %}
         <input type="radio" name="answer" id="answer{{ forloop.counter }}" value="{{ answer.id }}" />
         <label for="answer{{ forloop.counter }}">{{ answer.text }}</label><br />
     {% endfor %}
-    <input type="submit" value="Ответить" />
+    <input type="submit" value="ANSWER" />
 </form>

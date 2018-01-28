@@ -31,7 +31,9 @@ ALLOWED_HOSTS = ['51.15.93.39']
 
 # Application definition
 
+#=AleX= 'questions.apps.questionsConfig' - new application 'questions'
 INSTALLED_APPS = [
+    'questions.apps.questionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
