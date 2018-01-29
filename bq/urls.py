@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD
+=======
+from questions import views 
+>>>>>>> 057bfece7b64866734ccbc48eb83a93a57302920
 
+#=AleX= 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('questions/', include('questions.urls')),
 ]
